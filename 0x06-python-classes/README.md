@@ -1,6 +1,6 @@
 # Python Classes
 
-Mastering the concepts of OOP in python... Let me wrote some python code
+Mastering the concepts of OOP in python... Let me write some python code
 
 ```py
 class User:
