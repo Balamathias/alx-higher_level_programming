@@ -3,6 +3,7 @@
 
 import json
 import os
+import turtle
 
 
 class Base:
@@ -111,3 +112,44 @@ class Base:
         instance.y = 0
         instance.update(**dictionary)
         return instance
+    
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Draw Rectangles and Squares using the turtle module.
+
+        Args:
+            list_rectangles (list): A list of Rectangle objects to draw.
+            list_squares (list): A list of Square objects to draw.
+        """
+        tim = turtle.Turtle()
+        tim.screen.bgcolor("#b7312c")
+        tim.pensize(3)
+        tim.shape("turtle")
+
+        tim.color("#ffffff")
+        for rect in list_rectangles:
+            tim.showturtle()
+            tim.up()
+            tim.goto(rect.x, rect.y)
+            tim.down()
+            for _ in range(2):
+                tim.forward(rect.width)
+                tim.left(90)
+                tim.forward(rect.height)
+                tim.left(90)
+            tim.hideturtle()
+
+        tim.color("#b5e3d8")
+        for sq in list_squares:
+            tim.showturtle()
+            tim.up()
+            tim.goto(sq.x, sq.y)
+            tim.down()
+            for i in range(2):
+                tim.forward(sq.width)
+                tim.left(90)
+                tim.forward(sq.height)
+                tim.left(90)
+            tim.hideturtle()
+
+        turtle.exitonclick()
