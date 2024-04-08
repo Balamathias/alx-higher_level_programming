@@ -13,7 +13,6 @@ if __name__ == "__main__":
 
     r = requests.get(url)
     commits = r.json()
-    print(commits)
     try:
         for i in range(10):
             print("{}: {}".format(
