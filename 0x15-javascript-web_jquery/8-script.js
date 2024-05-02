@@ -1,7 +1,7 @@
 // Queries an API and fetches all movie titles then inserts them
 // into the UL#list_movies tag
 
-let url = 'https://swapi.co/api/films/?format=json';
+let url = 'https://swapi-api.alx-tools.com/api/films/?format=json';
 $.get(url, function (data) {
   let films = data.results;
   for (let film of films) {
